@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 
 function ProductCard({ product, onAddToCart, isInCart }) {
   return (
@@ -10,17 +9,15 @@ function ProductCard({ product, onAddToCart, isInCart }) {
       <p>{product.inStock ? 'In Stock' : 'Out of Stock'}</p>
 
       {!isInCart && (
-        <Button
-          variant="contained"
+        <button
           data-testid={`product-${product.id}`}
           onClick={() => onAddToCart(product.name)}
         >
           Add to cart
-        </Button>
+        </button>
       )}
     </div>
   );
 }
 
 export default ProductCard;
-

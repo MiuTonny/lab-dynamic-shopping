@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from "@mui/material/Button";
 
 function DarkModeToggle({ darkMode, setDarkMode }) {
   function handleClick() {
@@ -7,9 +6,9 @@ function DarkModeToggle({ darkMode, setDarkMode }) {
   }
 
   return (
-    <Button variant="contained" onClick={handleClick}>
+    <button onClick={handleClick}>
       {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
-    </Button>
+    </button>
   );
 }
 
